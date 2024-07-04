@@ -5,11 +5,64 @@ Student: Clément Fritz, 522486cf
 
 This GitHub repository contains the code for the smart contracts of "Smart Finance Technologies". The contract facilitates automated payment processing upon order confirmation, enhancing the efficiency and security of supply chain finance operations. 
 
-### File Overview
+## File Overview
+This repository contains mutliple files:
+1. README.md: explanation of code and integration
+2. SmartContract1.sol: most basic smart contract version
 
+All code files are explained below.
 
-### Smart Contract no. 1
+## SmartContract1
+### Contract Overview
 
+The `SupplyChainFinance` contract automates the transfer of funds from the buyer to the supplier once the order is confirmed.
+
+### Key Features
+
+- **Order Confirmation**: The buyer confirms the receipt of goods or services.
+- **Automated Payment Transfer**: Funds are transferred to the supplier upon order confirmation.
+- **Event Logging**: Important actions like order confirmation and payment transfer are logged.
+
+### Contract Variables
+
+- `address public buyer`: The address of the buyer.
+- `address public supplier`: The address of the supplier.
+- `uint256 public orderAmount`: The amount to be transferred, specified in the smallest unit of the currency (e.g., wei for ETH).
+- `bool public orderReceived`: Indicates if the order has been received.
+- `bool public fundsTransferred`: Indicates if the funds have been transferred.
+
+### Events
+
+- `event OrderConfirmed()`: Emitted when the order is confirmed by the buyer.
+- `event PaymentTransferred(address to, uint256 amount)`: Emitted when the payment is transferred to the supplier.
+
+### Functions
+
+#### `constructor(address _supplier, uint256 _orderAmount)`
+
+Initializes the contract with the supplier's address and the order amount. The buyer is set to the contract deployer.
+
+#### `confirmOrder() public`
+
+Allows the buyer to confirm the order. Emits the `OrderConfirmed` event.
+
+#### `transferPayment() public`
+
+Transfers the order amount to the supplier if the order has been confirmed and funds have not been transferred yet. Emits the `PaymentTransferred` event.
+
+#### `depositFunds() public payable`
+
+Allows the buyer to deposit the exact order amount in the contract. The amount must match the specified `orderAmount`.
+
+## Usage Instructions
+
+1. **Deploy the Contract**
+   - Deploy the contract with the supplier's address and the order amount (in smallest currency units).
+   ```solidity
+   SupplyChainFinance(supplierAddress, orderAmount);
+    ```
+
+   
 
 ## Further Steps
 Please note that additional steps are required to integrate the contract into company systems.
