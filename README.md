@@ -1,8 +1,7 @@
 # FinTech: Business Models and Application
+2nd Assignment - Development of a Minimum Viable Product 
 
-## 2nd Assignment - Development of a Minimum Viable Product 
-
-## Student: Clément Fritz, 522486cf
+Student: Clément Fritz, 522486cf
 
 This GitHub repository contains the code for the smart contracts of "Smart Finance Technologies". The contract facilitates automated payment processing upon order confirmation, enhancing the efficiency and security of supply chain finance operations. 
 
