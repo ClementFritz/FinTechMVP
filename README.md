@@ -152,7 +152,7 @@ Allows the buyer to deposit the exact order amount in the contract. The amount m
 
 #### `cancelOrder() public`
 
-Allows the buyer to cancel the order before it is confirmed or funds are transferred. Emits the `OrderCancelled` event.
+Allows the buyer to cancel the order before it is confirmed or funds are transferred. Sends any remaining funds back to the buyer and emits the OrderCancelled event.
 
 ### Usage Instructions
 
@@ -196,7 +196,7 @@ Allows the buyer to cancel the order before it is confirmed or funds are transfe
    contract.makePartialPayment(partialAmount, { value: partialAmount });
     ```
 9. **Cancel Order** (optional)
-   - The buyer can cancel the order before it is confirmed or funds are transferred.
+   - The buyer can cancel the order before it is confirmed or funds are transferred. Any remaining funds are sent back to the buyer.
     ```solidity
    contract.cancelOrder();
     ```
