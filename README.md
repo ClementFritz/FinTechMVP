@@ -1,7 +1,7 @@
 # FinTech: Business Models and Application
-2nd Assignment - Development of a Minimum Viable Product 
+*2nd Assignment - Development of a Minimum Viable Product*
 
-Student: Clément Fritz, 522486cf
+**Student: Clément Fritz, 522486cf**
 
 This GitHub repository contains the code for the smart contracts of "Smart Finance Technologies". The contract facilitates automated payment processing upon order confirmation, enhancing the efficiency and security of supply chain finance operations. 
 
@@ -54,15 +54,30 @@ Transfers the order amount to the supplier if the order has been confirmed and f
 
 Allows the buyer to deposit the exact order amount in the contract. The amount must match the specified `orderAmount`.
 
-## Usage Instructions
+### Usage Instructions
 
 1. **Deploy the Contract**
    - Deploy the contract with the supplier's address and the order amount (in smallest currency units).
    ```solidity
    SupplyChainFinance(supplierAddress, orderAmount);
     ```
+2. **Deposit Funds**
+   - The buyer deposits the required funds into the contract.
+   ```solidity
+   contract.depositFunds({ value: orderAmount });
+    ```
+3. **Confirm Order**
+   - The buyer confirms the receipt of goods or services.
+   ```solidity
+   contract.confirmOrder();
+    ``` 
+4. **Transfer Payment**
+   - After order confirmation, the buyer (or another authorized entity) transfers the payment to the supplier.
+   ```solidity
+   contract.transferPayment();
+    ``` 
 
-   
+## SmartContract2
 
 ## Further Steps
 Please note that additional steps are required to integrate the contract into company systems.
