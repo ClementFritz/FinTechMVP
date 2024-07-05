@@ -27,7 +27,7 @@ The `SupplyChainFinance` contract automates the transfer of funds from the buyer
 
 - `address public buyer`: The address of the buyer.
 - `address public supplier`: The address of the supplier.
-      - Example Adress: `0xb794f5ea0ba39494ce839613fffba74279579268` 
+  - Example Adress: `0xb794f5ea0ba39494ce839613fffba74279579268` 
 - `uint256 public orderAmount`: The amount to be transferred, specified in the smallest unit of the currency (e.g., wei for ETH).
 - `bool public orderReceived`: Indicates if the order has been received.
 - `bool public fundsTransferred`: Indicates if the funds have been transferred.
