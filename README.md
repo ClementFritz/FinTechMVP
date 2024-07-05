@@ -8,7 +8,8 @@ This GitHub repository contains the code for the smart contracts of "Smart Finan
 ## File Overview
 This repository contains mutliple files:
 1. README.md: explanation of code and integration
-2. SmartContract1.sol: most basic smart contract version
+2. SmartContract1.sol: most basic smart contract version - named `SupplyChainFinance_V1`
+3. SmartContract2.sol: smart contract with additional optional features - named `SupplyChainFinance_V2`
 
 All code files are explained below.
 
