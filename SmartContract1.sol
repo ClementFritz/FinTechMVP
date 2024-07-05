@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SupplyChainFinance {
+contract SupplyChainFinance_V1 {
     address public buyer;
     address public supplier;
     uint256 public orderAmount;
